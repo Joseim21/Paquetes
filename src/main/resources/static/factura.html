@@ -1,20 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factura</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #datos_cliente{
+      padding-left: 100px;
+      padding-top: 100px;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: left;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      margin-top: 100px;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: none;
+      border-bottom: 1px solid #333;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    .seccion_pagos {
+      width: 80%;
+      margin: 20px auto;
+      margin-top: 100px;
+    }
+    .payment-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .payment-form input[type="text"],
+    .payment-form input[type="number"],
+    .payment-form input[type="date"],
+    .payment-form input[type="submit"] {
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <header>
-                <img src="/imagenes/Imagen1.png" alt="" class="imagen_logo">
-        </header>
-    </div>
+  <header>
+    <h1>Encabezado</h1>
+  </header>
 
-    <h1>Datos de usuario</h1>
-    <p>Nombre Cliente</p>
-    <p>Fecha</p>
-    
+  <div id="datos_cliente">
+    <h2>Cliente:</h2>
+    <h2>Fecha:</h2>
+  </div>
+  
+  <table>
+    <tr>
+      <td>Item</td>
+      <td>Peso</td>
+      <td>Total</td>
+    </tr>
+    <tr>
+      <td>Fila 2, Columna 1</td>
+      <td>Fila 2, Columna 2</td>
+      <td>Fila 2, Columna 3</td>
+    </tr>
+  </table>
+
+  <section class="seccion_pagos">
+    <h2>Sección de Pagos</h2>
+    <form class="payment-form">
+      <input type="text" placeholder="Nombre en la tarjeta">
+      <input type="text" placeholder="Número de tarjeta">
+      <input type="text" placeholder="Fecha de expiración">
+      <input type="text" placeholder="Código de seguridad">
+      <input type="submit" value="Pagar">
+    </form>
+  </section>
 </body>
 </html>

@@ -17,6 +17,7 @@ public class Conexion {
             int x=1;
            
         }
+        System.out.println("Se logro la conexion");
         return null;
     }
     
